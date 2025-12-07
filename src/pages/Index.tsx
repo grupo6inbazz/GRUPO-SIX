@@ -1,16 +1,12 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { TesteConexao } from "@/components/TesteConexao";
 
 const Index = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate("/");
-  }, [navigate]);
-
-  return null;
+  return (
+    <div className="min-h-screen bg-background p-8">
+      <h1 className="text-2xl font-bold text-center mb-6">Inbazz</h1>
+      <TesteConexao />
+    </div>
+  );
 };
 
 export default Index;
