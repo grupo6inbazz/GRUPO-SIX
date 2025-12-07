@@ -5,6 +5,8 @@ import {
   Megaphone,
   FileText,
   User,
+  Users,
+  Handshake,
   ChevronLeft,
   ChevronRight,
   LogOut,
@@ -16,7 +18,9 @@ import { useState } from "react";
 const brandNavItems = [
   { icon: Home, label: "Dashboard", path: "/brand/dashboard" },
   { icon: Megaphone, label: "Campanhas", path: "/brand/campaigns" },
-  { icon: FileText, label: "Candidatos", path: "/brand/candidates" },
+  { icon: FileText, label: "Propostas", path: "/brand/proposals" },
+  { icon: Users, label: "Candidatos", path: "/brand/candidates" },
+  { icon: Handshake, label: "Collabs", path: "/brand/collabs" },
   { icon: User, label: "Perfil", path: "/brand/profile" },
 ];
 

@@ -11,11 +11,15 @@ import BrandDashboard from "./pages/brand/BrandDashboard";
 import BrandCampaigns from "./pages/brand/BrandCampaigns";
 import CreateCampaign from "./pages/brand/CreateCampaign";
 import BrandCandidates from "./pages/brand/BrandCandidates";
+import CampaignManagement from "./pages/brand/CampaignManagement";
+import BrandProposals from "./pages/brand/BrandProposals";
+import ApproveCollabs from "./pages/brand/ApproveCollabs";
 import CreatorDashboard from "./pages/creator/CreatorDashboard";
 import CreatorCampaigns from "./pages/creator/CreatorCampaigns";
 import CreatorProposals from "./pages/creator/CreatorProposals";
 import SendProposal from "./pages/creator/SendProposal";
 import Profile from "./pages/Profile";
+import ProfileSettings from "./pages/ProfileSettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -79,7 +83,7 @@ function AppRoutes() {
         path="/brand/campaigns/:id"
         element={
           <ProtectedRoute allowedType="brand">
-            <BrandCampaigns />
+            <CampaignManagement />
           </ProtectedRoute>
         }
       />
@@ -92,10 +96,34 @@ function AppRoutes() {
         }
       />
       <Route
+        path="/brand/proposals"
+        element={
+          <ProtectedRoute allowedType="brand">
+            <BrandProposals />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/brand/collabs"
+        element={
+          <ProtectedRoute allowedType="brand">
+            <ApproveCollabs />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/brand/profile"
         element={
           <ProtectedRoute allowedType="brand">
             <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/brand/profile/settings"
+        element={
+          <ProtectedRoute allowedType="brand">
+            <ProfileSettings />
           </ProtectedRoute>
         }
       />
@@ -138,6 +166,14 @@ function AppRoutes() {
         element={
           <ProtectedRoute allowedType="creator">
             <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/creator/profile/settings"
+        element={
+          <ProtectedRoute allowedType="creator">
+            <ProfileSettings />
           </ProtectedRoute>
         }
       />
